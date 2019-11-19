@@ -13,11 +13,13 @@ a {
 }
 
 body {
-  background-color: salmon;
+  background-image: url(../img/pattern.png);
+  padding: 10px 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 #container {
-  width: 70%;
+  width: 50%;
   margin: auto;
 }
 
@@ -31,19 +33,22 @@ header {
 
 #banner {
   position: relative;
-  background-color: grey;
   height: calc(90% - 20px);
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border: 10px solid white;
 }
 
-#title h1 {
+
+#title img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50px;
-  border: 7px solid white;
-  padding: 7px;
+  max-height: 60%;
+  max-width: 100%;
 }
 
 #title h2 {
@@ -51,19 +56,22 @@ header {
   top: calc(75% + 28px);
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
   width: 80%;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
 }
 
 nav {
   position: relative;
-  background-color: pink;
-  height: 10%;
+  background-color: lightgrey;
+  /* height: 10%; */
   line-height: 40px;
 }
 nav ul {
   width: 100%;
   height: 100%;
+  line-height: 40px;
 }
 
 nav ul li {
@@ -71,7 +79,20 @@ nav ul li {
   padding-right: 10px;
 }
 nav ul li a {
+  line-height: 40px;
   vertical-align: middle;
+}
+
+nav ul li a:hover {
+  background-color: grey;
+}
+
+nav ul li:not(:last-child) a {
+  border-right: 1px solid darkgrey;
+}
+
+nav ul li:not(:first-child) a {
+  border-left: 1px solid white;
 }
 
 main {
@@ -102,8 +123,11 @@ footer {
   width: 25%;
 }
 
-.col-l *{
+.col-l * {
   margin-bottom: 10px;
+}
+.col-l a {
+  color: green;
 }
 .col-l div {
   padding: 5px;
@@ -129,6 +153,7 @@ footer {
   bottom:0;
   text-align: center;
   font-style: italic;
+  color: lightgrey;
 }
 
 footer h5 {
